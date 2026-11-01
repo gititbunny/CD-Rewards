@@ -1,0 +1,345 @@
+/* ========================================
+   CRAW DADDY'S REWARDS
+   MEMBERSHIP CARD — BRAND REFRESH
+======================================== */
+
+/* FLIP CONTAINER */
+
+.member-flip-card {
+  width: 100%;
+  min-width: 0;
+  min-height: 320px;
+  perspective: 1400px;
+  cursor: pointer;
+  outline: none;
+}
+
+.member-flip-card:focus-visible {
+  outline: 3px solid #f45124;
+  outline-offset: 6px;
+  border-radius: 18px;
+}
+
+.member-flip-inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.member-flip-card.flipped .member-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.member-flip-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* ========================================
+   FRONT — BLACK & VIBRANT ORANGE
+======================================== */
+
+.member-flip-front.membership-card {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 32px 36px;
+
+  border-radius: 18px;
+  border: none;
+
+  background:
+    radial-gradient(
+      circle at 105% -6%,
+      transparent 0 132px,
+      rgba(255, 255, 255, 0.28) 133px 135px,
+      transparent 136px
+    ),
+    linear-gradient(
+      115deg,
+      #171717 0%,
+      #171717 68%,
+      #f45124 68%,
+      #f45124 100%
+    );
+
+  color: #ffffff;
+  box-shadow: none;
+}
+
+/* Remove decorative elements from old design */
+
+.member-flip-front.membership-card::before,
+.member-flip-front.membership-card::after {
+  display: none;
+}
+
+/* Keep card content above background */
+
+.member-flip-front .membership-card-top,
+.member-flip-front .membership-card-center,
+.member-flip-front .membership-card-bottom {
+  position: relative;
+  z-index: 2;
+}
+
+/* Card branding */
+
+.member-flip-front .membership-card-top {
+  color: #ffffff;
+}
+
+.member-flip-front .membership-card-top span {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.member-flip-front .membership-card-top svg {
+  color: #ffffff;
+}
+
+/* Membership details */
+
+.member-flip-front .membership-card-center > span {
+  color: #00ff13;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* Member name */
+
+.member-flip-front .membership-card-center h2 {
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-size: clamp(43px, 4.5vw, 64px);
+  font-weight: 900;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Membership number */
+
+.member-flip-front .membership-card-bottom > div > span {
+  color: #d5d5d5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.member-flip-front .membership-card-bottom strong {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+/* Tap to scan button */
+
+.member-flip-front .membership-demo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 17px;
+
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+
+  color: #171717;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* ========================================
+   BACK — VIBRANT ORANGE QR CARD
+======================================== */
+
+.member-flip-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 24px 18px;
+  text-align: center;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      transparent 0%,
+      transparent 78%,
+      rgba(0, 0, 0, 0.1) 78%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    #f45124;
+
+  border: none;
+  border-radius: 18px;
+
+  transform: rotateY(180deg);
+}
+
+/* Small top label */
+
+.member-scan-eyebrow {
+  color: #171717;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+/* Main scan heading */
+
+.member-scan-title {
+  color: #ffffff;
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-size: 31px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+/* QR code container */
+
+.member-qr-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: max-content;
+  margin: 0 auto;
+  padding: 6px;
+
+  background: #ffffff;
+  border: 3px solid #171717;
+  border-radius: 14px;
+
+  line-height: 0;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.member-qr-box svg {
+  display: block;
+  width: 136px;
+  height: 136px;
+}
+
+/* Membership number beneath QR code */
+
+.member-scan-number {
+  color: #171717;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+/* Instructions */
+
+.member-scan-instruction {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Flip-back instruction */
+
+.member-flip-back-hint {
+  color: #171717;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  margin-top: 3px;
+}
+
+/* ========================================
+   MOBILE RESPONSIVENESS
+======================================== */
+
+@media (max-width: 760px) {
+  .member-flip-card,
+  .member-flip-inner {
+    min-height: 300px;
+  }
+
+  .member-flip-front.membership-card {
+    padding: 25px 23px;
+
+    background:
+      radial-gradient(
+        circle at 105% -6%,
+        transparent 0 90px,
+        rgba(255, 255, 255, 0.25) 91px 93px,
+        transparent 94px
+      ),
+      linear-gradient(
+        123deg,
+        #171717 0%,
+        #171717 71%,
+        #f45124 71%,
+        #f45124 100%
+      );
+  }
+
+  .member-flip-front .membership-card-center h2 {
+    font-size: clamp(40px, 11vw, 56px);
+    max-width: 90%;
+  }
+
+  .member-flip-front .membership-card-top span {
+    font-size: 10px;
+  }
+
+  .member-flip-front .membership-demo {
+    padding: 10px 12px;
+    font-size: 9px;
+  }
+
+  .member-flip-back {
+    gap: 4px;
+    padding: 18px 12px;
+  }
+
+  .member-scan-title {
+    font-size: 27px;
+  }
+
+  .member-qr-box svg {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .member-flip-inner {
+    transition: none;
+  }
+}
