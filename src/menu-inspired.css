@@ -1,0 +1,483 @@
+/* ========================================
+   CRAWDADDY'S REWARDS
+   MENU-INSPIRED VISUAL REFRESH
+======================================== */
+
+:root {
+  --menu-black: #171717;
+  --menu-orange: #f45124;
+  --menu-yellow: #ffbf32;
+  --menu-pink: #e94e91;
+  --menu-blue: #42c9db;
+  --menu-white: #ffffff;
+}
+
+/* ========================================
+   HERO — MAGAZINE COVER FEEL
+======================================== */
+
+.hero-content {
+  position: relative;
+
+  background:
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(244, 81, 36, 0.16),
+      transparent 38%
+    ),
+    #171717;
+}
+
+.hero-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--menu-orange);
+}
+
+.hero h1 {
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.hero-eyebrow {
+  color: var(--menu-yellow);
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.hero-stamp {
+  background: var(--menu-orange);
+  border: 3px solid #ffffff;
+
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.hero-photo-caption {
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+/* ========================================
+   YELLOW RESTAURANT STRIP
+======================================== */
+
+.intro-strip {
+  background: var(--menu-yellow);
+  color: var(--menu-black);
+}
+
+.intro-strip-content {
+  color: var(--menu-black);
+}
+
+.intro-strip-content > span {
+  color: var(--menu-black);
+  font-weight: 900;
+}
+
+.intro-strip .strip-star {
+  color: var(--menu-black);
+}
+
+/* ========================================
+   SECTION HEADINGS
+======================================== */
+
+.section-heading .eyebrow,
+.dashboard-section-heading .eyebrow,
+.rewards-header .eyebrow {
+  color: var(--menu-orange);
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.section-heading h2,
+.feature-content h2,
+.closing-cta h2 {
+  font-weight: 900;
+}
+
+/* ========================================
+   BENEFIT CARDS — MENU COLOUR PALETTE
+======================================== */
+
+.benefit-card {
+  position: relative;
+  overflow: hidden;
+
+  border: 0;
+  border-bottom: 6px solid var(--menu-black);
+  border-radius: 20px;
+
+  box-shadow: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Yellow card */
+
+.benefit-card:nth-child(1) {
+  background: var(--menu-yellow);
+  color: var(--menu-black);
+}
+
+.benefit-card:nth-child(1) h3,
+.benefit-card:nth-child(1) p {
+  color: var(--menu-black);
+}
+
+/* Charcoal card */
+
+.benefit-card:nth-child(2) {
+  background: var(--menu-black);
+  color: var(--menu-white);
+  border-bottom-color: var(--menu-orange);
+}
+
+.benefit-card:nth-child(2) h3,
+.benefit-card:nth-child(2) p {
+  color: var(--menu-white);
+}
+
+/* Pink card */
+
+.benefit-card:nth-child(3) {
+  background: var(--menu-pink);
+  color: var(--menu-black);
+}
+
+.benefit-card:nth-child(3) h3,
+.benefit-card:nth-child(3) p {
+  color: var(--menu-black);
+}
+
+/* Graphic icon badges */
+
+.benefit-card:nth-child(1) .benefit-icon {
+  background: var(--menu-black);
+  color: var(--menu-white);
+}
+
+.benefit-card:nth-child(2) .benefit-icon {
+  background: var(--menu-orange);
+  color: var(--menu-white);
+}
+
+.benefit-card:nth-child(3) .benefit-icon {
+  background: var(--menu-white);
+  color: var(--menu-black);
+}
+
+/* Magazine-style card numbers */
+
+.benefit-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+
+  color: var(--menu-black);
+
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.benefit-card:nth-child(2) .benefit-number {
+  background: var(--menu-orange);
+  color: var(--menu-white);
+}
+
+/* The menu uses bold editorial serif headings */
+
+.benefit-card h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 27px;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.1;
+  letter-spacing: -0.7px;
+}
+
+/* ========================================
+   FEATURE — EDITORIAL FOOD SPREAD
+======================================== */
+
+.feature-section {
+  overflow: hidden;
+
+  border-radius: 22px;
+  background: var(--menu-white);
+}
+
+.feature-image {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.feature-image-tag {
+  background: var(--menu-orange);
+  color: var(--menu-white);
+
+  border-radius: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.feature-content {
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(255, 191, 50, 0.16),
+      transparent 45%
+    ),
+    #f6f5f2;
+}
+
+.feature-content .eyebrow {
+  color: var(--menu-orange);
+  font-weight: 900;
+}
+
+.feature-content h2 {
+  color: var(--menu-black);
+}
+
+.feature-content p {
+  color: #484848;
+}
+
+.feature-content .text-link {
+  color: var(--menu-black);
+  border-bottom-color: var(--menu-orange);
+}
+
+/* ========================================
+   FINAL CALL TO ACTION
+======================================== */
+
+.closing-cta {
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  background:
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(0, 0, 0, 0.12),
+      transparent 35%
+    ),
+    var(--menu-orange);
+}
+
+.closing-cta h2 {
+  color: var(--menu-white);
+}
+
+.closing-cta .button-light {
+  background: var(--menu-black);
+  color: var(--menu-white);
+
+  border-radius: 14px;
+}
+
+/* ========================================
+   MEMBERSHIP DASHBOARD
+======================================== */
+
+.dashboard-welcome .eyebrow {
+  color: var(--menu-orange);
+}
+
+.dashboard-welcome h1 {
+  color: var(--menu-black);
+}
+
+/* Birthday panel */
+
+.birthday-feature {
+  border-radius: 22px;
+
+  background: #fff0e5;
+  border: 2px solid #f8ded0;
+}
+
+.birthday-feature h2 {
+  font-weight: 900;
+}
+
+.birthday-badge {
+  background: var(--menu-white);
+  color: var(--menu-orange);
+}
+
+/* Keep existing flipping card design */
+
+.member-flip-card {
+  border-radius: 20px;
+}
+
+/* ========================================
+   REWARDS — MENU-STYLE CARDS
+======================================== */
+
+.reward-card {
+  overflow: hidden;
+
+  border: 2px solid var(--menu-black);
+  border-radius: 20px;
+
+  background: var(--menu-white);
+
+  box-shadow: 6px 6px 0 rgba(23, 23, 23, 0.08);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.reward-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 8px 10px 0 rgba(244, 81, 36, 0.16);
+}
+
+.reward-image {
+  overflow: hidden;
+}
+
+.reward-image img {
+  object-fit: cover;
+  filter: saturate(1.12) contrast(1.05);
+
+  transition: transform 0.4s ease;
+}
+
+.reward-card:hover .reward-image img {
+  transform: scale(1.035);
+}
+
+.reward-image-label {
+  background: var(--menu-yellow);
+  color: var(--menu-black);
+
+  border-radius: 50px;
+
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.reward-body {
+  background: var(--menu-white);
+}
+
+/* Editorial menu-inspired reward titles */
+
+.reward-body h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(29px, 3vw, 38px);
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.12;
+  letter-spacing: -1px;
+
+  color: var(--menu-black);
+}
+
+.reward-body .eyebrow {
+  color: var(--menu-orange);
+}
+
+.reward-button {
+  color: var(--menu-orange);
+  font-weight: 900;
+}
+
+/* Reward category filters */
+
+.filter-button {
+  border-radius: 12px;
+  font-weight: 800;
+}
+
+.filter-button.active {
+  background: var(--menu-black);
+  color: var(--menu-white);
+  border-color: var(--menu-black);
+}
+
+/* ========================================
+   FORM AND BUTTON REFINEMENTS
+======================================== */
+
+.button,
+.header-button,
+.submit-button {
+  border-radius: 14px;
+  font-weight: 900;
+}
+
+.form-field input {
+  border-radius: 10px;
+}
+
+.form-field input:focus {
+  border-color: var(--menu-orange);
+  outline-color: var(--menu-orange);
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 760px) {
+  .hero-content::before {
+    height: 5px;
+  }
+
+  .benefit-card {
+    border-radius: 18px;
+  }
+
+  .benefit-card h3 {
+    font-size: 26px;
+  }
+
+  .feature-section,
+  .closing-cta,
+  .reward-card {
+    border-radius: 18px;
+  }
+
+  .reward-body h2 {
+    font-size: 31px;
+  }
+
+  .reward-card {
+    box-shadow: 4px 4px 0 rgba(23, 23, 23, 0.08);
+  }
+
+  .benefit-card:hover,
+  .reward-card:hover {
+    transform: none;
+  }
+}
