@@ -47,7 +47,7 @@ const photos = {
   celebration: image('photo-1511795409834-ef04bbd61622'),
   wine: image('photo-1510812431401-41d2bd2722f3'),
   food: image('photo-1504674900247-0877df9cc836'),
-  steak: image('photo-1546833999-b9f581a1996d'),
+  steak: image('photo-1544025162-d76694265947'),
   wings: image('photo-1527477396000-e27163b481c2'),
   seafood: image('photo-1559737558-2f5a35f4523b'),
   breakfast: image('photo-1533089860892-a7c6f0a88666'),
